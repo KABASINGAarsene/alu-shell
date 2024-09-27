@@ -1,2 +1,2 @@
 #!/bin/bash
-comm nocheck-order /etc/passwd  /etc/hosts
+cat /etc/passwd | true | echo -e "\n" | true | cat /etc/hosts
