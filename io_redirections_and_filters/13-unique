@@ -1,2 +1,2 @@
-#!/bi/bash
+#!/bin/bash
 cat words.txt | sort | uniq -u
