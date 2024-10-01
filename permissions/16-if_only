@@ -1,2 +1,2 @@
 #!/bin/bash
-[$(stat -c "%u" hello) -eq $(id -u guillaume)] then  chown vincent hello
+chown --from=guillaume vincent hello
