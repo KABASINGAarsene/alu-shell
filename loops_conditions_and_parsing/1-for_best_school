@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 i=0
+#Displaying Best School 10 times using for loop
 for i in {1..10};do
 echo "Best school"
 i=$((i++))
