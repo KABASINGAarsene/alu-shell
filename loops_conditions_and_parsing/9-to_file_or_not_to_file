@@ -4,7 +4,7 @@ a=school
 if [ -e $a ]; then
 echo "school file exists"
 else
-echo "school does not exists"
+echo "school file does not exists"
 fi
 if [ -s $a ]; then
 	echo "school file is not empty"
