@@ -3,9 +3,7 @@
 a=school
 if [ -e $a ]; then
 echo "school file exists"
-else
-echo "school file does not exists"
-fi
+
 if [ -s $a ]; then
 	echo "school file is not empty"
 else
@@ -13,6 +11,7 @@ else
 fi
 if [ -f $a ]; then
 	echo "school is a regular file"
+fi
 else
-	echo " "
+	echo "shool file does not exist "
 fi
