@@ -1,8 +1,17 @@
 #!/usr/bin/env bash
 #A script to display the content of current working directory in a list format
+
 for file in *; do
-if [[ $file != .?* ]]; then
-echo "$file | cut -d '-' -f2-"
-else echo "$file"
-fi
+  
+  if [[ -f "$file" ]]; then
+    
+    new_name="${file#*-}"
+    
+
+    if [[ "$new_name" != "$file" ]]; then
+      echo "$new_name"
+    else
+      echo "$file"
+    fi
+  fi
 done
