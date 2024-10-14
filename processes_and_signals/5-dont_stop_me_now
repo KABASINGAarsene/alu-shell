@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 #Killing a PROCESS
- 
 prog_pid=()
-readarray -t prog pid < <(pgrep -la -x "bash.*" | grep '4-to_infinity_and_beyond' | cut -d ' ' -f 1)
-for ((1 =0; 1 < "${#prog_pid[@]}"; i++)) do
+readarray -t prog_pid < <(pgrep -la -x "bash.*" | grep '4-to_infinity_and_beyond' | cut -d ' ' -f 1)
+for ((i =0; i < "${#prog_pid[@]}"; i++)) do
 kill -s SIGTERM "${prog_pid[1]}"
 done
 
