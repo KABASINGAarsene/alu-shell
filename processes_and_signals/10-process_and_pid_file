@@ -19,7 +19,7 @@ cleanup() {
 
 trap 'sigterm_handler' SIGTERM
 trap 'sigint_handler' SIGINT
-trap 'cleanup'SIGQUIT 
+trap 'cleanup' SIGQUIT 
 
 while true; do
 	echo "To infinity and beyond"
