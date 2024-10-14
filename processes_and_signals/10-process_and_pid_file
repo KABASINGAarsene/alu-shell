@@ -1,4 +1,27 @@
 #!/usr/bin/env bash
 #I LOVE YOU
-clean_up='rm /var/run/myscript.pid; exit $?'
+
 echo $$ > "/var/run/myscript.pid"
+sigterm_handler() {
+	echo "I hate the kill command"
+	cleanup
+}
+
+siginit_handler() {
+	echo "Y U no love me?!"
+}
+
+cleanup() {
+	echo "cleaning up..."
+	rm -f /var/run/myscript.pid
+	exit 0
+}
+
+trap 'sigterm_handler' SIGTERM
+trap 'sigint_handler' SIGINT
+trap 'cleanup'SIGQUIT 
+
+while true; do
+	echo "To infinity and beyond"
+	sleep 1
+done
