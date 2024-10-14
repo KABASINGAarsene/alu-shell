@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#displaying all processes on the terminal.
+ps -faux
